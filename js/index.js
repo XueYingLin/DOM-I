@@ -50,10 +50,13 @@ for (let i=0; i<a.length; i++) {
   a[i].innerHTML = siteContent['nav'][`nav-item-${i+1}`];
 }
 
-let h1 = document.getElementsByTagName("h1");
+//use etElementsByTagName(), return arrayList like
+// let h1 = document.getElementsByTagName("h1");
+// h1[0].textContent = siteContent["cta"]["h1"]; 
 
-h1[0].textContent = siteContent["cta"]["h1"]; 
-console.log(h1);
+//use querySelector, return a variable
+let h1 = document.querySelector("h1");
+h1.textContent = siteContent["cta"]["h1"]; 
 
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute ('src', siteContent["cta"]["img-src"]);
@@ -87,6 +90,7 @@ contact[0].children[0].textContent = siteContent["contact"]["contact-h4"];
 contact[0].children[1].textContent = siteContent["contact"]["address"];
 contact[0].children[2].textContent = siteContent["contact"]["phone"];
 contact[0].children[3].textContent = siteContent["contact"]["email"];
+
 
 
 let footer = document.querySelector("footer > p");
